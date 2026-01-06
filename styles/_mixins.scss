@@ -1,0 +1,16 @@
+@mixin fluid-text($max:35, $min:12) {
+    font-size: clamp(#{$min}px, #{$max / 1280 * 100}vw, #{$max}px);
+}
+
+@mixin reset-link {
+    color: inherit;
+     &, &:hover {
+        text-decoration: none;
+     }
+}
+
+@mixin reset-button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
