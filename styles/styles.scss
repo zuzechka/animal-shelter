@@ -1,8 +1,11 @@
-@import 
-    'normalize', 
-    'fonts', 
-    'globals', 
-    'media', 
-    'mixins', 
-    'variables', 
-    'utils'
+@use 'normalize';
+@use 'mixins';
+@use 'globals';
+@use 'media';
+@use 'variables';
+@use 'utils';
+
+@use "./blocks/_header"
+
+
+
