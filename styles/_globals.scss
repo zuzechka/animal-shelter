@@ -1,6 +1,18 @@
 @use 'mixins';
+@use 'media';
 
 
+body {
+    .container {
+    @include media.tablet {
+        padding-inline: 30px;
+    }
+
+    @include media.mobile {
+        padding-inline: 20px;
+    }    
+    }
+}
 a,
 button,
 input,

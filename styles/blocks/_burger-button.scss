@@ -1,0 +1,23 @@
+.burger-button {
+    width: 60px;
+    aspect-ratio: 1;
+
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    &::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: var(--color-primary);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: 0% -50%;
+
+        box-shadow: 0 -8px var(--color-primary), 0 8px var(--color-primary);
+    }
+}

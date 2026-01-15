@@ -1,22 +1,16 @@
-@use 'sass:math';
+@use "sass:math";
 
-
-@mixin fluid-text($max, $min) {
-    font-size: clamp(
-        #{$min}px, 
-        #{math.div($max, 1280) * 100}vw, 
-        #{$max}px);
+@mixin fluid-text($min, $max) {
+  font-size: clamp(
+    #{$min}px,
+    #{math.div($max, 1280) * 100}vw,
+    #{$max}px
+  );
 }
 
-@mixin reset-link {
+@mixin reset-link() {
     color: inherit;
      &, &:hover {
         text-decoration: none;
      }
-}
-
-@mixin reset-button {
-    padding: 0;
-    border: none;
-    background-color: transparent;
 }

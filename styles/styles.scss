@@ -5,7 +5,12 @@
 @use 'variables';
 @use 'utils';
 
-@use "./blocks/_header"
+
+@use "./blocks/button.scss";
+@use "./blocks/burger-button";
+@use "./blocks/mobile-overlay";
+@use "./blocks/header";
+@use "./blocks/about"
 
 
 
