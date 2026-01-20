@@ -1,0 +1,119 @@
+@use "../media";
+
+.pets {
+    background-color: var(--color-light-l);
+    padding-top:80px;
+    min-height: 877px;
+
+    @include media.mobile {
+        padding-top: 30px;
+        min-height: 791px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__head {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        color: var(--color-dark-l);
+        display: inline-block;
+        max-width: 400px;
+        margin-bottom: 60px;
+        text-align: center;
+
+        @include media.mobile {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 55px;
+          
+        @media (max-width: 1280px) {
+            gap: 7px;
+            overflow: hidden;
+       }
+
+       @include media.mobile {
+            &__carusel { order: 1;}
+            .button {order: 2; }
+            &{
+                max-width: 270px;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                column-gap: 80px;
+                align-items: flex-start;
+            }
+       }
+
+    }
+
+    &__carusel {
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+       gap: 89px;
+       overflow: hidden; 
+       scroll-behavior: smooth;
+       max-width: 988px;
+
+       @media (max-width: 1280px) {
+        gap: 40px;
+        overflow: hidden;
+       }
+
+       @include media.tablet {
+        max-width: 708px;
+        gap: 30px;
+        overflow: hidden;
+       }
+
+    }
+
+    &__card {
+        background-color: var(--color-light-s);
+        border-radius: 9px;
+        width: 270px;
+        height: 435px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; 
+
+        @include media.tablet {
+            &:nth-child(3n) {
+                display: none;
+            }
+        }
+
+        @include media.mobile {
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+        
+        &--title {
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.06em;
+            color: var(--color-dark-l);
+        }
+        
+    }
+
+    &__card:hover {
+        background-color: #fff;
+    }
+
+
+}   

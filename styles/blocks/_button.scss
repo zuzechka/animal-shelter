@@ -8,7 +8,7 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
-    letter-spacing: 0.06;
+    letter-spacing: 0.06em;
     color: var(--color-dark-xxxl);
 
     &--header {
@@ -19,5 +19,49 @@
         background-color: transparent;
         color: var(--color-light-s);
         border: 2px solid var(--color-primary);
+    }
+
+    &--carusel {
+        width: 52px;
+        background-color: transparent;
+        border: 3px solid var(--color-primary);
+        display: flex;
+        justify-content: center;
+    }
+
+    &--carusel:hover {
+        background-color: var(--color-primary);
+        border: none;
+        color: var(--color-dark-xxxl);
+    }
+
+    &--card-pets {
+        width: 187px;
+        background-color: transparent;
+        border: 2px solid var(--color-primary);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: var(--color-dark-xxxl);
+    }
+
+    &--card-pets:hover {
+        background-color: var(--color-primary);
+        border: none;
+        color: var(--color-dark-xxxl);
+    }
+
+    &--pets { 
+        width: 261px;
+        margin-top: 60px;
+        @include media.mobile {
+            margin-top: 20px;
+        }
+    }
+
+    &--pets:hover {
+        background-color: transparent;
+        border: 3px solid var(--color-primary);
     }
 }

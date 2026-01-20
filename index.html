@@ -87,7 +87,42 @@
             </div>
         </section>
 
-        
+        <section class="pets">
+            <div class="pets__container container">
+                    <h2 class="pets__head">Our friends who<br>are looking for a house</h2>
+                    
+                    <div class="pets__nav">
+                            <button class="button button--carusel" type="button" onclick="scrollCarousel(-1)">
+                                <img src="./icons/arrow-button-1.svg" alt="" width="14px" height="6px">
+                            </button>
+                            <div class="pets__carusel" id = "carousel">
+                                <div class="pets__card">
+                                    <img src="./images/pets-katrine.svg" alt="Cat Katrine" width="270px" height="270px" loading="lazy">
+                                    <h3 class="pets__card--title">Katrine</h3>
+                                    <button class="button button--card-pets" type="button" onclick="aboutPetOne.showModal()">Learn more</button>
+                                </div>
+
+                                <div class="pets__card">
+                                    <img src="./images/pets-jennifer.svg" alt="Dog Jennifer" width="270px" height="270px" loading="lazy">
+                                    <h3 class="pets__card--title">Jennifer</h3>
+                                    <button class="button button--card-pets">Learn more</button>
+                                </div>
+
+                                <div class="pets__card">
+                                    <img src="./images/pets-woody.png" alt="Dog Woody" width="270px" height="270px" loading="lazy">
+                                    <h3 class="pets__card--title">Woody</h3>
+                                    <button class="button button--card-pets">Learn more</button>
+                                </div>
+                            </div>
+
+                        <button class="button button--carusel" type="button" onclick="scrollCarousel(1)">
+                                <img src="./icons/arrow-button-2.svg" alt="" width="14px" height="6px">
+                        </button>
+                    </div>
+
+                    <button class = "button button--pets" type="button">Get to know the rest</button>
+            </div>
+        </section>
     </main>
 
     <dialog class="mobile-overlay visible-mobile" id = "mobile0overlay">
@@ -119,5 +154,53 @@
             </ul>
         </div>
     </dialog>
+
+    <dialog class = "about-pet" id = "aboutPetOne">
+        <form class ="about-pet--close-button-wrapper" method="dialog">
+            <button class="about-pet--close-button" type="submit">
+                <span class="visually-hidden">
+                    Close information about pet
+                </span>
+                <img src="./icons/close-button.svg" alt="" width="12px" height="12px">
+            </button>
+        </form>
+
+        <div class="about-pet--body">
+            <img src="./images/pets-katrine.svg" class = "about-pet--body__image" alt="Cat Katrine" width="500px" height="500px" loading="lazy">
+            <div class="about-pet--body__description">
+                <h3 class="about-pet--body__description--h">Katrine</h3>
+                <h4 class="about-pet--body__description--sub-h">Cat - British Shorthair</h4>
+                <p class="about-pet--body__description--p">
+                    Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. 
+                    Will love you until the last breath she takes as long as you are the one. 
+                    She is picky about her affection. 
+                    She loves cuddles and to stretch into your hands for a deeper relaxations.
+                </p>
+                <ul class = "about-pet--body__description--list">
+                    <li class = "about-pet--body__description--item"><strong>Age:</strong> 2 months</li>
+                    <li class = "about-pet--body__description--item"><strong>Inoculations:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Diseases:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>    
+        </div>
+    </dialog>
+
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            const cards = Array.from(carousel.children);
+
+            if (direction === 1) {
+                // вправо: первый элемент в конец
+                const first = cards.shift();
+                carousel.appendChild(first);
+            } else {
+                // влево: последний элемент в начало
+                const last = cards.pop();
+                carousel.prepend(last);
+            }
+    }
+    </script>
 </body>
 </html>
