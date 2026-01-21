@@ -9,21 +9,20 @@
     border: none;
     max-width: 952px;
     min-height: 552px;
-    margin: 0 auto;
-    margin-top: 60px;
+    top: 50%;              /* центрируем по вертикали */
+    left: 50%;             /* центрируем по горизонтали */
+    transform: translate(-50%, -50%);
     background-color: transparent;
     overflow: visible;
 
     @include media.tablet {
-        max-width: 682px;
+        width: 682px;
         min-height: 402px;
-        margin-top: 200px;
     }
 
     @include media.mobile {
         max-width: 271px;
         min-height: 393px;
-        margin-top: 150px;
     }
 
     &--close-button-wrapper{
