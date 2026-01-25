@@ -105,13 +105,13 @@
                                 <div class="pets__card">
                                     <img src="./images/pets-jennifer.svg" alt="Dog Jennifer" width="270px" height="270px" loading="lazy">
                                     <h3 class="pets__card--title">Jennifer</h3>
-                                    <button class="button button--card-pets">Learn more</button>
+                                    <button class="button button--card-pets" type="button" onclick="aboutPetTwo.showModal()">Learn more</button>
                                 </div>
 
                                 <div class="pets__card">
                                     <img src="./images/pets-woody.png" alt="Dog Woody" width="270px" height="270px" loading="lazy">
                                     <h3 class="pets__card--title">Woody</h3>
-                                    <button class="button button--card-pets">Learn more</button>
+                                    <button class="button button--card-pets" type="button" onclick="aboutPetThree.showModal()">Learn more</button>
                                 </div>
                             </div>
 
@@ -197,9 +197,39 @@
                 </div>
             </div>
         </section>
-
-
     </main>
+
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__blocks">
+                <h2 class="footer__blocks-h">For questions and suggestions</h2>
+                <a href = "mailto:@shelter.com" class="footer__blocks--link">
+                    <img src="./icons/icon-email.svg" alt="Email" width="40px" height="32px">
+                    <span class = "footer__blocks--data">email@shelter.com</span>
+                </a>
+
+                <a href = "tel:+136745677554" class="footer__blocks--link">
+                    <img src="./icons/icon-phone.svg" alt="Phone" width="40px" height="32px">
+                    <span class = "footer__blocks--data">+13 674 567 75 54</span>
+                </a>
+            </div>
+
+            <div class="footer__blocks">
+                <h2 class="footer__blocks-h">We are waiting for your visit</h2>
+                <a href = "/" class="footer__blocks--link">
+                    <img src="./icons/icon-marker.svg" alt="Adress in Boston" width="22px" height="32px">
+                    <span class = "footer__blocks--data">1 Central Street, Boston (entrance from the store)</span>
+                </a>
+
+                <a href = "/" class="footer__blocks--link">
+                    <img src="./icons/icon-marker.svg" alt="Adress in London" width="22px" height="32px">
+                    <span class = "footer__blocks--data">18 South Park, London</span>
+                </a>
+            </div>
+
+            <img src="./images/footer-puppy.svg" alt="Puppy" width="300px" height="310px" loading="lazy">
+        </div>
+    </footer>
 
     <dialog class="mobile-overlay visible-mobile" id = "mobile0overlay">
         <form class ="mobile-overlay--close-button-wrapper" method="dialog">
@@ -254,6 +284,66 @@
                 </p>
                 <ul class = "about-pet--body__description--list">
                     <li class = "about-pet--body__description--item"><strong>Age:</strong> 2 months</li>
+                    <li class = "about-pet--body__description--item"><strong>Inoculations:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Diseases:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>    
+        </div>
+    </dialog>
+
+    <dialog class = "about-pet" id = "aboutPetTwo">
+        <form class ="about-pet--close-button-wrapper" method="dialog">
+            <button class="about-pet--close-button" type="submit">
+                <span class="visually-hidden">
+                    Close information about pet
+                </span>
+                <img src="./icons/close-button.svg" alt="" width="12px" height="12px">
+            </button>
+        </form>
+
+        <div class="about-pet--body">
+            <img src="./images/pets-jennifer.svg" class = "about-pet--body__image" alt="Dog Jennifer" width="500px" height="500px" loading="lazy">
+            <div class="about-pet--body__description">
+                <h3 class="about-pet--body__description--h">Jennifer</h3>
+                <h4 class="about-pet--body__description--sub-h">Dog - Labrador</h4>
+                <p class="about-pet--body__description--p">
+                    Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. 
+                    This girl really enjoys being able to go outside to run and play, 
+                    but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                </p>
+                <ul class = "about-pet--body__description--list">
+                    <li class = "about-pet--body__description--item"><strong>Age:</strong>4 months</li>
+                    <li class = "about-pet--body__description--item"><strong>Inoculations:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Diseases:</strong> none</li>
+                    <li class = "about-pet--body__description--item"><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>    
+        </div>
+    </dialog>
+
+     <dialog class = "about-pet" id = "aboutPetThree">
+        <form class ="about-pet--close-button-wrapper" method="dialog">
+            <button class="about-pet--close-button" type="submit">
+                <span class="visually-hidden">
+                    Close information about pet
+                </span>
+                <img src="./icons/close-button.svg" alt="" width="12px" height="12px">
+            </button>
+        </form>
+
+        <div class="about-pet--body">
+            <img src="./images/pets-woody.png" class = "about-pet--body__image" alt="Dog Woody" width="500px" height="500px" loading="lazy">
+            <div class="about-pet--body__description">
+                <h3 class="about-pet--body__description--h">Woody</h3>
+                <h4 class="about-pet--body__description--sub-h">Dog - Golden Retriever</h4>
+                <p class="about-pet--body__description--p">
+                    Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. 
+                    Since he is on the stronger side, he will learn a lot from your training. 
+                    Woody will be happier when he finds a new family that can spend a lot of time with him.
+                </p>
+                <ul class = "about-pet--body__description--list">
+                    <li class = "about-pet--body__description--item"><strong>Age:</strong>10 months</li>
                     <li class = "about-pet--body__description--item"><strong>Inoculations:</strong> none</li>
                     <li class = "about-pet--body__description--item"><strong>Diseases:</strong> none</li>
                     <li class = "about-pet--body__description--item"><strong>Parasites:</strong> none</li>

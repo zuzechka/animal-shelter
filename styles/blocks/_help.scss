@@ -9,11 +9,19 @@
         min-height: 779px;
     }
 
+    @include media.mobile {
+        padding-top: 40px;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 65px;
+
+        @include media.mobile {
+            gap: 35px;
+        }
     }
 
     &--head {
@@ -25,6 +33,11 @@
         line-height: 130%;
         letter-spacing: 0.06em;
         color: var(--color-dark-l);
+
+        @include media.mobile {
+            font-size: 25px;
+            max-width: 220px;
+        }
     }
 
     &__contain {

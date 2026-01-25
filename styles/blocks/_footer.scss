@@ -1,0 +1,75 @@
+@use '../media';
+
+.footer {
+    background: 
+    url('../images/start-screen-background.png'),
+    linear-gradient(338deg, rgba(38,36,37,1) 23%, rgba(91,72,58,1) 100%);
+    padding-top:40px;
+    min-height: 310px;
+
+    @include media.mobile {
+        padding-top: 30px;
+    }
+
+    &__content {
+        display: flex;
+        max-width: 1200px;
+        min-height: 310px;
+        justify-content: space-between;
+
+        @include media.tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        @include media.mobile {
+            gap: 30px;
+        }
+    }
+
+    &__blocks{
+        margin-top: 10px;
+        max-width: 278px;
+        height: 234px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media.mobile{
+            height: 222px;
+        }
+
+        &-h {
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: var(--color-light-xl);
+
+            @include media.mobile {
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+
+        &--link{
+            display: flex;
+            gap: 20px;
+            max-width: 302px;
+        }
+        
+        &--data{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+            color: var(--color-primary);
+          } 
+
+          &--link:hover &--data {
+            color: var(--color-light-xl);
+          }
+        
+        }
+}
