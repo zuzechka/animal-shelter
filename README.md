@@ -27,6 +27,7 @@ desktop screens
 Responsiveness is achieved using media queries and flexible layouts.
 
 📸Screenshots
+
 <img width="532" height="1079" alt="image" src="https://github.com/user-attachments/assets/d600366b-9704-4ebe-8701-29dba76161d7" />
 
 🚀Live Demo
